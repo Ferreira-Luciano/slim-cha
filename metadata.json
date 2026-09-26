@@ -1,0 +1,6 @@
+{
+  "name": "Slim Chá - Página Oficial",
+  "description": "Páginas oficiais de vendas de alta conversão para Slim Chá (Emagrecimento) e IArmonize (Sono, Cabelo & Energia) com carrosséis dinâmicos e checkout integrado Braip.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

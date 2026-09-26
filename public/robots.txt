@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap oficial para indexação no Google
+Sitemap: https://ais-pre-wfjikzxw7wos42zre3fpey-481061818446.us-west2.run.app/sitemap.xml

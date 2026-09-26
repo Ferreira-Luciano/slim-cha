@@ -1,55 +1,47 @@
-# 🚀 Como Subir para o GitHub e Vercel (Super Simples e Sem Chaves de API)
+# 🚀 Como Subir para o GitHub e Vercel (Configuração 100% Pronta sem Erro 404)
 
-Sua página de vendas do **Slim Chá** e **IArmonize** foi simplificada ao máximo:
+Sua página de vendas do **Slim Chá** e **IArmonize** está pronta e configurada para o Vercel:
 - **Zero chaves de API necessárias.**
 - **Zero banco de dados externo ou cadastros complexos.**
+- **Correção automática do erro 404 da Vercel** incluída no arquivo `vercel.json` e `.npmrc`.
 - Todos os botões levam **diretamente para o checkout de afiliados da Braip**.
 - Totalmente **responsivo** (celular, tablet e computador).
-- O site sobe e funciona **do jeito que está**, pronto para vender!
 
 ---
 
-## 📌 Passo 1: Subir para o GitHub
+## 🛠️ O Que Foi Ajustado Para Corrigir o Erro 404 na Vercel:
 
-1. Acesse [github.com](https://github.com/) e crie um novo repositório (ex: `slimcha-oficial`).
-2. No seu terminal (dentro da pasta do projeto), rode estes comandos:
+1. **`vercel.json` Completo**:
+   - Definido `"framework": "vite"`.
+   - Definido `"buildCommand": "npm run build"`.
+   - Definido `"outputDirectory": "dist"` (o Vercel dava 404 quando tentava procurar na pasta raiz em vez da pasta `dist`).
+   - Regra de roteamento SPA `rewrites` para entregar a página inicial em qualquer URL acessada.
+2. **`package-lock.json` e `.npmrc`**:
+   - Gerado o arquivo de bloqueio de dependências `package-lock.json`.
+   - Criado `.npmrc` com `legacy-peer-deps=true` para garantir que o Vercel instale todos os pacotes sem nenhum conflito de versão.
+
+---
+
+## 📌 Como Atualizar no GitHub para a Vercel Fazer o Deploy Automático:
+
+No seu terminal (dentro da pasta do projeto), rode estes 3 comandos:
 
 ```bash
-# Iniciar o git (caso ainda não tenha iniciado)
-git init
-
-# Adicionar todos os arquivos
 git add .
-
-# Criar o commit
-git commit -m "feat: pagina de vendas oficial com checkout braip"
-
-# Definir branch principal
-git branch -M main
-
-# Conectar com seu repositorio do GitHub (troque pelo link do seu repo)
-git remote add origin https://github.com/SEU_USUARIO/slimcha-oficial.git
-
-# Enviar os arquivos
-git push -u origin main
+git commit -m "fix: configuracao vercel.json e build dist sem erro 404"
+git push
 ```
+
+Assim que você der o `git push`, a Vercel vai detectar a atualização automaticamente, rodar o build e colocar o site no ar sem erro 404!
 
 ---
 
-## ⚡ Passo 2: Publicar na Vercel (Em 1 Minuto)
+## ⚡ Caso Seja o Primeiro Deploy na Vercel:
 
 1. Acesse [vercel.com](https://vercel.com/) e faça login com seu GitHub.
 2. Clique em **"Add New..."** > **"Project"**.
-3. Selecione o repositório que você acabou de subir no GitHub e clique em **"Import"**.
-4. Não precisa alterar nenhuma configuração e nem adicionar variáveis de ambiente!
-5. Clique diretamente no botão azul **"Deploy"**.
+3. Selecione o repositório e clique em **"Import"**.
+4. Deixe todas as opções no padrão (o arquivo `vercel.json` já cuida de tudo automaticamente).
+5. Clique no botão azul **"Deploy"**.
 
-**Pronto!** A Vercel vai gerar um link seguro (com HTTPS e SSL gratuito) e sua página de vendas estará no ar funcionando perfeitamente!
-
----
-
-## 🔗 Como Funciona o Link de Afiliado
-
-- Ao clicar em qualquer kit, o cliente é redirecionado instantaneamente para a página de pagamento oficial da Braip.
-- Se você tiver parâmetros de rastreamento de anúncios (como `?utm_source=instagram` ou `?src=facebook`), o site mantém essas tags automaticamente no link do checkout para você não perder nenhuma comissão.
-- Para alterar o link de afiliado, basta abrir o ícone de engrenagem no topo do próprio site e salvar seu novo link!
+Pronto! Em menos de 1 minuto seu site estará no ar com HTTPS, link de afiliado funcionando e sem nenhum erro 404!

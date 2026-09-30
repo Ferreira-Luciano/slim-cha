@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Header, ActiveProductPage } from './components/Header';
 import { SlimChaPage } from './pages/SlimChaPage';
 import { IArmonizePage } from './pages/IArmonizePage';
-import { LiveSalesPopup } from './components/LiveSalesPopup';
 import { StickyMobileBar } from './components/StickyMobileBar';
 import { AffiliateConfigModal } from './components/AffiliateConfigModal';
 import { Footer } from './components/Footer';
@@ -141,10 +140,7 @@ export default function App() {
         onSelectPage={handleSelectPage}
       />
 
-      {/* 4. Live Social Proof Toast */}
-      <LiveSalesPopup />
-
-      {/* 5. Sticky Mobile Conversion Bar */}
+      {/* 4. Sticky Mobile Conversion Bar */}
       <StickyMobileBar
         activePage={activePage}
         onCtaClick={scrollToKits}

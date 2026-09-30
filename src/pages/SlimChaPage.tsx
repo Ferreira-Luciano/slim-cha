@@ -477,7 +477,7 @@ export const SlimChaPage: React.FC<SlimChaPageProps> = ({ getCheckoutUrl }) => {
         theme="slim"
         testimonials={SLIM_CHA_REVIEWS}
         title="O Que Quem Já Toma o Slim Chá Está Falando"
-        subtitle="Confira relatos autênticos de clientes reais com fotos, notas 5 estrelas e compras auditadas via Braip."
+        subtitle="Confira relatos e experiências de pessoas que incluíram o Slim Chá na sua rotina diária."
         onCtaClick={scrollToKits}
       />
 

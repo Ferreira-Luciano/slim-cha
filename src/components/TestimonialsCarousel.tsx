@@ -98,8 +98,8 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
     : 'O Que Nossos Clientes Dizem Sobre o Protocolo';
 
   const defaultSubtitle = isSlim
-    ? 'Mais de 1.400 clientes reais que recuperaram a saúde, desincharam e secaram com a fórmula oficial do Slim Chá.'
-    : 'Depoimentos autênticos de quem transformou a qualidade do sono, saúde capilar e disposição diária com o IArmonize.';
+    ? 'Relatos e experiências de quem incluiu o Slim Chá na sua rotina diária de autocuidado.'
+    : 'Relatos e experiências de quem incluiu os suplementos IArmonize no seu dia a dia.';
 
   return (
     <section 
@@ -121,7 +121,7 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
               : 'bg-[#b85d2d]/10 text-[#b85d2d] border border-[#b85d2d]/20'
           }`}>
             <Sparkles className="w-4 h-4" />
-            <span>Avaliações Reais de Clientes Verificados</span>
+            <span>Relatos e Experiências de Usuários</span>
           </div>
 
           <h2 className={`font-heading font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight leading-tight ${
@@ -136,33 +136,29 @@ export const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
             {subtitle || defaultSubtitle}
           </p>
 
-          {/* Social Proof Aggregate Banner */}
+          {/* Trust Banner with Factual Items */}
           <div className={`mt-6 inline-flex flex-wrap items-center justify-center gap-3 sm:gap-6 py-2.5 px-5 rounded-2xl border ${
             isSlim 
               ? 'bg-[#0d1c13] border-emerald-800/40 text-stone-200' 
               : 'bg-white border-stone-200 text-stone-800 shadow-sm'
           }`}>
-            <div className="flex items-center gap-1.5">
-              <div className="flex text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-              <span className="font-heading font-black text-sm ml-1">4.9 / 5.0</span>
+            <div className="flex items-center gap-1.5 text-xs font-semibold">
+              <CheckCircle2 className={`w-4 h-4 ${isSlim ? 'text-emerald-400' : 'text-[#b85d2d]'}`} />
+              <span>Fórmula Original & Certificada</span>
             </div>
 
             <span className="hidden sm:inline opacity-30">|</span>
 
             <div className="flex items-center gap-1.5 text-xs font-semibold">
-              <CheckCircle2 className={`w-4 h-4 ${isSlim ? 'text-emerald-400' : 'text-[#b85d2d]'}`} />
-              <span>98.6% de Satisfação Comprovada</span>
+              <ShieldCheck className={`w-4 h-4 ${isSlim ? 'text-emerald-400' : 'text-[#b85d2d]'}`} />
+              <span>Checkout Oficial Braip</span>
             </div>
 
             <span className="hidden sm:inline opacity-30">|</span>
 
             <div className="flex items-center gap-1.5 text-xs text-stone-400 font-medium">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>Compras Auditadas via Braip</span>
+              <Sparkles className="w-4 h-4 text-emerald-400" />
+              <span>Envio com Código de Rastreio</span>
             </div>
           </div>
         </div>
